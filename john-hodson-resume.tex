@@ -3,31 +3,27 @@
 
 \newcommand*{\sectiondir}{sections/}
 \newcommand*{\sectionheaderspace}{\vspace{.40cm}}
+\newcommand*{\subsectionspace}{\vspace{.20cm}}
 
 \usepackage{titlesec}
 \usepackage{enumitem}
-\usepackage[geometry]{ifsym}
 \usepackage[hidelinks]{hyperref}
-\usepackage{marvosym}
-\usepackage{fontawesome}
 \usepackage[a4paper,%
             left=.5in,right=.5in,top=.45in,bottom=.45in,%
             footskip=.25in]{geometry}
 \usepackage{tabto}
+\usepackage{fontawesome}
 \usepackage{import}
 
 \titlespacing{\section}{0pt}{\parskip}{-\parskip}
-\newcommand\textbox[1]{%
-	\parbox{.333\textwidth}{#1}%
-}
-
 \pagenumbering{gobble}
 
 \begin{document}
 
 	\import{\sectiondir}{header.tex}
-	\import{\sectiondir}{education.tex}
 	\import{\sectiondir}{experience.tex}
+	\import{\sectiondir}{education.tex}
+	\import{\sectiondir}{volunteer.tex}
 	\import{\sectiondir}{projects.tex}
 	\import{\sectiondir}{skills.tex}
 		
