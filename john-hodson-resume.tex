@@ -5,6 +5,7 @@
 \newcommand*{\sectiondir}{sections/}
 \newcommand*{\sectionheaderspace}{\vspace{.40cm}}
 \newcommand*{\subsectionspace}{\vspace{.20cm}}
+\newcommand*{\headerspace}{\vspace{.05cm}}
 
 % Packages used to compile document
 \usepackage{titlesec}
@@ -25,6 +26,7 @@
 
 	% Primary heading
 	\noindent\centerline{ \huge\textbf{JOHN W HODSON}}\\
+	\headerspace
 
 	% Subheading with contact information
 	\noindent
@@ -32,6 +34,7 @@
 	\faHome \space \href{https://www.hodsonus.com}{https://www.hodsonus.com} \hspace*{\fill}
 	\faGithub \space \href{https://github.com/hodsonus}{hodsonus} \hspace*{\fill}
 	\faMobilePhone \space (727) 348-2899\\
+	\headerspace
 
 	% Import each section
 	\import{\sectiondir}{experience.tex}
@@ -39,5 +42,5 @@
 	\import{\sectiondir}{volunteer.tex}
 	\import{\sectiondir}{projects.tex}
 	\import{\sectiondir}{skills.tex}
-		
+
 \end{document}
