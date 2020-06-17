@@ -1,3 +1,7 @@
+default: resume
+
+resume: john-hodson-resume.pdf 
+
 john-hodson-resume.pdf: john-hodson-resume.tex sections/*.tex
 	pdflatex -interaction nonstopmode john-hodson-resume.tex
 

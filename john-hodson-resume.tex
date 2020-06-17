@@ -1,10 +1,12 @@
+% Sets the default text size to 11pt and class to article.
+\documentclass[11pt]{article}
 
-\documentclass[11pt]{article} %Sets the default text size to 11pt and class to article.
-
+% Setup abstractions for commonly used commands
 \newcommand*{\sectiondir}{sections/}
 \newcommand*{\sectionheaderspace}{\vspace{.40cm}}
 \newcommand*{\subsectionspace}{\vspace{.20cm}}
 
+% Packages used to compile document
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
@@ -15,13 +17,16 @@
 \usepackage{fontawesome}
 \usepackage{import}
 
+% Remove title spacing and page numbering
 \titlespacing{\section}{0pt}{\parskip}{-\parskip}
 \pagenumbering{gobble}
 
 \begin{document}
 
+	% Primary heading
 	\noindent\centerline{ \huge\textbf{JOHN W HODSON}}\\
 
+	% Subheading with contact information
 	\noindent
 	\faEnvelopeSquare \space\href{mailto:hodsonus@gmail.com}{hodsonus@gmail.com} \hspace*{\fill}
 	\faHome \space \href{https://www.hodsonus.com}{https://www.hodsonus.com} \hspace*{\fill}
