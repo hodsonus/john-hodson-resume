@@ -1,12 +1,6 @@
 % Sets the default text size to 11pt and class to article.
 \documentclass[11pt]{article}
 
-% Setup abstractions for commonly used commands
-\newcommand*{\sectiondir}{sections/}
-\newcommand*{\sectionheaderspace}{\vspace{.40cm}}
-\newcommand*{\subsectionspace}{\vspace{.20cm}}
-\newcommand*{\headerspace}{\vspace{.05cm}}
-
 % Packages used to compile document
 \usepackage{titlesec}
 \usepackage{enumitem}
@@ -27,8 +21,16 @@
     urlcolor={blue!80!black}
 }
 
-% Remove title spacing and page numbering
+% Setup abstractions for commonly used commands
+\newcommand*{\sectiondir}{sections/}
+\newcommand*{\sectionheaderspace}{\vspace{.40cm}}
+\newcommand*{\subsectionspace}{\vspace{.20cm}}
+\newcommand*{\headerspace}{\vspace{.05cm}}
+
+% Remove title spacing
 \titlespacing{\section}{0pt}{\parskip}{-\parskip}
+
+% Remove page numbering
 \pagenumbering{gobble}
 
 \begin{document}
@@ -49,7 +51,7 @@
 	\import{\sectiondir}{experience.tex}
 	\import{\sectiondir}{education.tex}
 	\import{\sectiondir}{volunteer.tex}
-	\import{\sectiondir}{projects.tex}
+	\import{\sectiondir}{primary-projects.tex}
 	\import{\sectiondir}{skills.tex}
 
 \end{document}
