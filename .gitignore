@@ -14,6 +14,15 @@
 *.idx
 *.toc
 
+## Core htlatex files:
+*.4ct
+*.4tc
+*.idv
+*.lg
+*.trc
+*.xref
+*.tmp
+
 ## Intermediate documents:
 *.dvi
 *-converted-to.*
