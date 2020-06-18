@@ -4,9 +4,9 @@
 .cmbx-12x-x-172{font-size:187%; font-weight: bold;}
 .cmbx-12x-x-172{ font-weight: bold;}
 .FontAwesome--fontawesomeone-x-x-109{}
-.cmbx-10x-x-109{ font-weight: bold;}
-.cmbx-10x-x-109{ font-weight: bold;}
 .FontAwesome--fontawesometwo-x-x-109{}
+.cmbx-10x-x-109{ font-weight: bold;}
+.cmbx-10x-x-109{ font-weight: bold;}
 .cmti-10x-x-109{ font-style: italic;}
 .cmsy-10x-x-109{}
 p.noindent { text-indent: 0em }
@@ -68,9 +68,7 @@ td.td01{ padding-left:0pt; padding-right:5pt; }
 td.td10{ padding-left:5pt; padding-right:0pt; }
 td.td11{ padding-left:5pt; padding-right:5pt; }
 table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
-.hline hr, .cline hr{ height : 0px; margin:0px; }
-.hline td, .cline td{ padding: 0; }
-.hline hr, .cline hr{border:none;border-top:1px solid black;}
+.hline hr, .cline hr{ height : 1px; margin:0px; }
 .tabbing-right {text-align:right;}
 span.TEX {letter-spacing: -0.125em; }
 span.TEX span.E{ position:relative;top:0.5ex;left:-0.0417em;}
@@ -80,9 +78,8 @@ span.LATEX span.TEX{ position:relative; left: -0.4em; }
 div.float, div.figure {margin-left: auto; margin-right: auto;}
 div.float img {text-align:center;}
 div.figure img {text-align:center;}
-.marginpar,.reversemarginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
-.marginpar p,.reversemarginpar p{margin-top:0.4em; margin-bottom:0.4em;}
-.reversemarginpar{float:left;}
+.marginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
+.marginpar p{margin-top:0.4em; margin-bottom:0.4em;}
 table.equation {width:100%;}
 .equation td{text-align:center; }
 td.equation { margin-top:1em; margin-bottom:1em; } 
@@ -120,9 +117,10 @@ div.author{white-space: nowrap;}
 .abstract p {margin-left:5%; margin-right:5%;}
 div.abstract {width:100%;}
 dt.enumerate-enumitem{float:left; clear:left; margin-left:1em; margin-right:1em;}
-span.textso{letter-spacing: 0.3em; word-spacing: 0.3em}
-span.textul{text-decoration:underline}
-span.textst{text-decoration:line-through}
-span.textcaps{font-variant:small-caps}
+.uline{ text-decoration:underline; }
+.uuline{ text-decoration:underline; }
+span.sout {text-decoration: line-through }
+span.xout {text-decoration: line-through }
+span.uwave {text-decoration:underline }
 /* end css.sty */
 

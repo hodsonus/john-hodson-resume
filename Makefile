@@ -1,4 +1,4 @@
-default: resume
+default: resume html
 
 resume: john-hodson-resume.pdf 
 html: john-hodson-resume.html
