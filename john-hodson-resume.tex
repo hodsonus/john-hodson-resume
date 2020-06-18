@@ -1,17 +1,21 @@
 % Sets the default text size to 11pt and class to article.
 \documentclass[11pt]{article}
 
+% Create the custom color for hyperlinks
+\usepackage{xcolor}
+\colorlet{dark-blue}{blue!80!black}
+
 % Packages used to compile document
 \usepackage{titlesec}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
+\usepackage[colorlinks,allcolors=dark-blue]{hyperref}
+\usepackage[normalem]{ulem}
 \usepackage[a4paper,%
             left=.5in,right=.5in,top=.45in,bottom=.45in,%
             footskip=.25in]{geometry}
 \usepackage{tabto}
 \usepackage{fontawesome}
 \usepackage{import}
-\usepackage{xcolor,soul,lipsum}
 
 % Setup abstractions for commonly used commands
 \newcommand*{\sectiondir}{sections/}
@@ -19,9 +23,16 @@
 \newcommand*{\subsectionspace}{\vspace{.20cm}}
 \newcommand*{\headerspace}{\vspace{.05cm}}
 
-% Create a command for my style of hyperlink
-\colorlet{dark-blue}{blue!80!black}
-\newcommand{\myhy}[2]{\hyperref[#1]{\color{dark-blue}\setulcolor{dark-blue}\ul{#2}}}
+% Some magic to format hyperlinks properly
+\makeatletter
+\begingroup
+\catcode`\$=6 %
+\catcode`\#=12 %
+\gdef\href@split$1#$2#$3\\$4{%
+	\hyper@@link{$1}{$2}{\uline{$4}}% or \underline
+	\endgroup
+}%
+\endgroup
 
 % Remove title spacing
 \titlespacing{\section}{0pt}{\parskip}{-\parskip}
@@ -32,14 +43,14 @@
 \begin{document}
 
 	% Primary heading
-	\noindent\centerline{ \huge\textbf{JOHN W HODSON}}\\
+	\noindent\centerline{ \huge\textbf{JOHN W HODSON} }\\
 	\headerspace
 
 	% Subheading with contact information
 	\noindent
-	\faEnvelopeSquare \space \myhy{mailto:hodsonus@gmail.com}{hodsonus@gmail.com} \hspace*{\fill}
-	\faHome \space \myhy{https://www.hodsonus.com}{https://www.hodsonus.com} \hspace*{\fill}
-	\faGithub \space \myhy{https://github.com/hodsonus}{hodsonus} \hspace*{\fill}
+	\faEnvelopeSquare \space \href{mailto:hodsonus@gmail.com}{hodsonus@gmail.com} \hspace*{\fill}
+	\faHome \space \href{https://www.hodsonus.com}{https://www.hodsonus.com} \hspace*{\fill}
+	\faGithub \space \href{https://github.com/hodsonus}{hodsonus} \hspace*{\fill}
 	\faMobilePhone \space (727) 348-2899\\
 	\headerspace
 
