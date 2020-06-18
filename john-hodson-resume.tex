@@ -4,28 +4,24 @@
 % Packages used to compile document
 \usepackage{titlesec}
 \usepackage{enumitem}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage[a4paper,%
             left=.5in,right=.5in,top=.45in,bottom=.45in,%
             footskip=.25in]{geometry}
 \usepackage{tabto}
 \usepackage{fontawesome}
 \usepackage{import}
-
-% Change hyperlink color and remove default obnoxious teal box
-\usepackage{xcolor}
-\hypersetup{
-    colorlinks,
-    linkcolor={red!50!black},
-    citecolor={blue!50!black},
-    urlcolor={blue!80!black}
-}
+\usepackage{xcolor,soul,lipsum}
 
 % Setup abstractions for commonly used commands
 \newcommand*{\sectiondir}{sections/}
 \newcommand*{\sectionheaderspace}{\vspace{.40cm}}
 \newcommand*{\subsectionspace}{\vspace{.20cm}}
 \newcommand*{\headerspace}{\vspace{.05cm}}
+
+% Create a command for my style of hyperlink
+\colorlet{dark-blue}{blue!80!black}
+\newcommand{\myhy}[2]{\hyperref[#1]{\color{dark-blue}\setulcolor{dark-blue}\ul{#2}}}
 
 % Remove title spacing
 \titlespacing{\section}{0pt}{\parskip}{-\parskip}
@@ -41,9 +37,9 @@
 
 	% Subheading with contact information
 	\noindent
-	\faEnvelopeSquare \space\href{mailto:hodsonus@gmail.com}{hodsonus@gmail.com} \hspace*{\fill}
-	\faHome \space \href{https://www.hodsonus.com}{https://www.hodsonus.com} \hspace*{\fill}
-	\faGithub \space \href{https://github.com/hodsonus}{hodsonus} \hspace*{\fill}
+	\faEnvelopeSquare \space \myhy{mailto:hodsonus@gmail.com}{hodsonus@gmail.com} \hspace*{\fill}
+	\faHome \space \myhy{https://www.hodsonus.com}{https://www.hodsonus.com} \hspace*{\fill}
+	\faGithub \space \myhy{https://github.com/hodsonus}{hodsonus} \hspace*{\fill}
 	\faMobilePhone \space (727) 348-2899\\
 	\headerspace
 
