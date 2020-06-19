@@ -11,7 +11,7 @@
 \usepackage[colorlinks,allcolors=dark-blue]{hyperref}
 \usepackage[normalem]{ulem}
 \usepackage[a4paper,%
-            left=.5in,right=.5in,top=.45in,bottom=.45in,%
+            left=.5in,right=.5in,top=.5in,bottom=.5in,%
             footskip=.25in]{geometry}
 \usepackage{tabto}
 \usepackage{fontawesome}
@@ -40,7 +40,14 @@
 % Remove page numbering
 \pagenumbering{gobble}
 
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.pt}% filet en haut de page
+\renewcommand{\footrulewidth}{0.pt}% filet en bas de page% A line of zero width in invisible
+
 \begin{document}
+
+	\rfoot{\today}
 
 	% Primary heading
 	\noindent\centerline{ \huge\textbf{JOHN W HODSON} }\\
@@ -57,8 +64,7 @@
 	% Import each section
 	\import{\sectiondir}{experience.tex}
 	\import{\sectiondir}{education.tex}
-	\import{\sectiondir}{volunteer.tex}
-	\import{\sectiondir}{primary-projects.tex}
+	\import{\sectiondir}{projects.tex}
 	\import{\sectiondir}{skills.tex}
 
 \end{document}
