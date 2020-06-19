@@ -16,6 +16,7 @@
 \usepackage{tabto}
 \usepackage{fontawesome}
 \usepackage{import}
+\usepackage{fancyhdr}
 
 % Setup abstractions for commonly used commands
 \newcommand*{\sectiondir}{sections/}
@@ -40,14 +41,12 @@
 % Remove page numbering
 \pagenumbering{gobble}
 
-\usepackage{fancyhdr}
+% Footer settings
 \pagestyle{fancy}
-\renewcommand{\headrulewidth}{0.pt}% filet en haut de page
-\renewcommand{\footrulewidth}{0.pt}% filet en bas de page% A line of zero width in invisible
+\renewcommand{\headrulewidth}{0.pt}
+\renewcommand{\footrulewidth}{0.pt}
 
 \begin{document}
-
-	\rfoot{\today}
 
 	% Primary heading
 	\noindent\centerline{ \huge\textbf{JOHN W HODSON} }\\
@@ -67,5 +66,8 @@
 	\import{\sectiondir}{volunteer.tex}
 	\import{\sectiondir}{projects.tex}
 	\import{\sectiondir}{skills.tex}
+
+	% Right footer with the date of generation
+	\rfoot{\today}
 
 \end{document}
