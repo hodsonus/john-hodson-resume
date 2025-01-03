@@ -61,11 +61,108 @@
 	\headerspace
 
 	% Import each section
-	\import{\sectiondir}{education.tex}
-	\import{\sectiondir}{experience.tex}
-	\import{\sectiondir}{volunteer.tex}
-	\import{\sectiondir}{projects.tex}
-	\import{\sectiondir}{skills.tex}
+	\section*{EDUCATION}
+
+	\hrule \relax
+	\sectionheaderspace
+
+	\noindent \textbf{University of Florida,} Gainesville, FL
+	\hfill\textbf{GPA: 3.96/4.0}
+	\hfill\textbf{August 2016 to May 2020}\\
+	\textit{Bachelor of Science in Computer Engineering}
+	\begin{itemize}[noitemsep,nolistsep, label = {-}]
+		\item  Coursework - 
+			Algorithm Design,
+			Object Oriented Programming,
+			Computer System Design,
+			Operating Systems,
+			Microprocessor Applications II (RTOS),
+			Programming Language Concepts,
+			Database Systems
+		\item  Honors - 
+			\href{https://www.ece.ufl.edu/people/student-awards/}
+					{Computer E Award} (most prestigious academic award granted by ECE department),
+			\href{https://clas.ufl.edu/undergraduate/anderson-scholars/}
+					{Anderson Scholar} (top 1\% academically, class of 2020),
+			\href{https://www.eng.ufl.edu/leadership/students/scholarships/thomas-o-hunter-leadership/}
+					{College of Engineering Scholarship for Engineering Leadership},
+			CISE Scholarship,
+			ECE Scholarship (x2),
+			College of Engineering Dean\rq s List (x4)
+			% \href{https://www.sfa.ufl.edu/types-of-aid/bright-futures/}
+			% 		{Bright Futures Florida Academic Scholar (100\% tuition coverage)}
+	\end{itemize}
+	\subsectionspace
+
+	\section*{EXPERIENCE}
+
+	\hrule \relax
+	\sectionheaderspace
+	
+	\noindent \textbf{Microsoft,} Redmond, WA \hfill\textbf{May 2019 to August 2019}\\
+	\textit{Software Engineer Intern}
+	\begin{itemize}[noitemsep,nolistsep, label = {-}]
+		\item Developed using C\# and .NET on \href{https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis}{Azure Active Directory}, a cloud-based service responsible for managing user identities, access management, and devices.
+		\item Solved a major customer complaint regarding the loss of private BitLocker key data by refactoring API calls and architecting an additional external storage model to decouple the lifetime of two data objects.
+		\item Changed the intrinsic way that the Microsoft Mezzo cache service operated by altering their data syncing service to sync data objects with a one-to-many instead of a one-to-one relationship.
+	\end{itemize}
+	\subsectionspace
+	
+	\noindent \textbf{Ultimate Software,} Weston, FL \hfill\textbf{May 2018 to August 2018}\\
+	\textit{Software Engineer Intern}
+	\begin{itemize}[noitemsep,nolistsep, label = {-}]
+		\item Developed and tested using C\# and ASP.NET on \href{https://www.ultimatesoftware.com/UltiPro-Solution-Features-Payment-Services}{UTE (UltiPro Tax Engine)}, an internal tax filing service responsible for the collection of over 13,000 tax codes.
+		\item Implemented Grafana dashboard to diagnose performance issues with generation and calculation of tax forms in order to better serve users.
+	\end{itemize}
+
+	\subsectionspace
+
+	\section*{VOLUNTEER EXPERIENCE}
+
+	\hrule \relax
+	\sectionheaderspace
+
+	\noindent\textbf{Google igniteCS,} Gainesville, FL \hfill\textbf{January 2017 to May 2018}\\
+	\textit{Program Lead (formerly Logistics Director)}
+	\begin{itemize}[noitemsep,nolistsep, label = {-}]
+		\item Led an educational initiative with the goal of educating students in basic programming principles.
+		\item Communicated directly with Google to design \href{https://sites.google.com/view/ignitecs/home}{the initiative's} Computer Science curiculuum.
+		\item Managed scheduling between Oak View Middle School and our Google igniteCS team of over 30 mentors.
+	\end{itemize} 
+	\subsectionspace
+
+	\section*{PROJECTS}
+
+	\hrule \relax
+	\sectionheaderspace
+
+	\noindent\textbf{Firespotter,} Gainesville, FL  \hfill\textbf{August 2019 to May 2020}
+	\begin{itemize}[noitemsep,nolistsep, label={-}]
+		\item Built \href{https://github.com/UF-CEN4914/firespotter}{a web application} in Django that utilizes deep learning to detect wildfires in an array of images provided by low-cost internet protocol cameras to aid in the fight against wildfires.
+		\item Designed a neural network architecture in PyTorch that achieved a 95.3\% accuracy rating.
+	\end{itemize}
+	\subsectionspace
+
+	\noindent\textbf{C-Like Language to LLVM Compiler,} Gainesville, FL  \hfill\textbf{April 2019 to May 2019}
+	\begin{itemize}[noitemsep,nolistsep, label={-}]
+		\item Built \href{https://github.com/hodsonus/programming-language-concepts}{a compiler} in OCaml for GNU bc, the popular Unix calculator language, using the LR(1) parser generator Menhir and OCaml's LLVM library to generate LLVM IR code.
+		\item Includes functions, if/else statements, and while/for loops - all structured in an abstract syntax tree.
+	\end{itemize}
+	\subsectionspace
+
+	\section*{TECHNICAL SKILLS}
+
+	\hrule \relax
+	\sectionheaderspace
+
+	\begin{itemize}[noitemsep,nolistsep, label={}]
+		\item \textbf{Architecture \& Systems} \tabto*{5cm} Web Development,  RESTful APIs,  Microservices, Embedded Systems
+		\item \textbf{Languages} \tabto*{5cm} C\#, Python, Java, C, Assembly (AVR, ARM), OCaml, C++
+		\item \textbf{Frameworks \& Tools} \tabto*{5cm} .NET, Django, Hugo, PyTorch, Bash, Git
+		\item \textbf{Data Management} \tabto*{5cm} Microsoft SQL Server, MongoDB
+		\item \textbf{Containers \& Cloud} \tabto*{5cm}  Docker, Azure
+	\end{itemize}
+	\subsectionspace
 
 	% Right footer with the date of generation
 	\rfoot{\today}
