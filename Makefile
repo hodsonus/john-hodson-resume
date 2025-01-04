@@ -1,7 +1,6 @@
-default: resume html resume2
+default: resume html
 
 resume: john-hodson-resume.pdf 
-resume2: john-hodson-resume2.pdf 
 html: john-hodson-resume.html
 
 john-hodson-resume.html: john-hodson-resume.tex
@@ -9,9 +8,6 @@ john-hodson-resume.html: john-hodson-resume.tex
 
 john-hodson-resume.pdf: john-hodson-resume.tex
 	pdflatex john-hodson-resume.tex
-
-john-hodson-resume2.pdf: john-hodson-resume2.tex
-	pdflatex john-hodson-resume2.tex
 
 clean:
 	rm -f ./*/*.aux ./*/*.lof ./*/*.log ./*/*.lot ./*/*.fls \

@@ -1,170 +1,136 @@
-% Sets the default text size to 11pt and class to article.
 \documentclass[11pt]{article}
 
-% Create the custom color for hyperlinks
+%-------------------------------
+% Package imports and formatting
+%-------------------------------
 \usepackage{xcolor}
-\colorlet{dark-blue}{blue!80!black}
-
-% Packages used to compile document
 \usepackage{titlesec}
 \usepackage{enumitem}
-\usepackage[colorlinks,allcolors=dark-blue]{hyperref}
+\usepackage[colorlinks,allcolors=blue!80!black]{hyperref}
 \usepackage[normalem]{ulem}
 \usepackage[a4paper,%
             left=.5in,right=.5in,top=.5in,bottom=.5in,%
             footskip=.25in]{geometry}
 \usepackage{tabto}
 \usepackage{fontawesome}
-\usepackage{import}
 \usepackage{fancyhdr}
 
-% Setup abstractions for commonly used commands
-\newcommand*{\sectiondir}{sections/}
-\newcommand*{\sectionheaderspace}{\vspace{.40cm}}
-\newcommand*{\subsectionspace}{\vspace{.20cm}}
-\newcommand*{\headerspace}{\vspace{.05cm}}
+%-------------------------------
+% Footer settings
+%-------------------------------
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\pagestyle{fancy}
+\pagenumbering{gobble}
+\rfoot{\today}
 
-% Some magic to format hyperlinks properly
-\makeatletter
-\begingroup
-\catcode`\$=6 %
-\catcode`\#=12 %
-\gdef\href@split$1#$2#$3\\$4{%
-	\hyper@@link{$1}{$2}{\uline{$4}}% or \underline
-	\endgroup
-}%
-\endgroup
-
-% Remove title spacing
+%-------------------------------
+% Title spacing
+%-------------------------------
 \titlespacing{\section}{0pt}{\parskip}{-\parskip}
 
-% Remove page numbering
-\pagenumbering{gobble}
-
-% Footer settings
-\pagestyle{fancy}
-\renewcommand{\headrulewidth}{0.pt}
-\renewcommand{\footrulewidth}{0.pt}
-
+%-------------------------------
+% Document starts
+%-------------------------------
 \begin{document}
 
-	% Primary heading
-	\noindent\centerline{ \huge\textbf{JOHN W HODSON} }\\
-	\headerspace
+%-------------------------------
+% Name and Contact
+%-------------------------------
+\noindent
+\centerline{\huge \textbf{JOHN W HODSON}}\\[14pt] % Adjusted whitespace here
+\vspace{0.2cm}
+\faEnvelopeSquare \,\href{mailto:hodsonus@gmail.com}{hodsonus@gmail.com}
+\hfill
+\faHome \,\href{https://hodsonus.com}{hodsonus.com}
+\hfill
+\faGithub \,\href{https://github.com/hodsonus}{hodsonus}
+\hfill
+\faMobilePhone \,(727) 348-2899
 
-	% Subheading with contact information
-	\noindent
-	\faEnvelopeSquare \space \href{mailto:hodsonus@gmail.com}{hodsonus@gmail.com} \hspace*{\fill}
-	\faHome \space \href{https://www.hodsonus.com}{https://www.hodsonus.com} \hspace*{\fill}
-	\faGithub \space \href{https://github.com/hodsonus}{hodsonus} \hspace*{\fill}
-	\faMobilePhone \space (727) 348-2899\\
-	\headerspace
+%-------------------------------
+% PROFESSIONAL SUMMARY
+%-------------------------------
+\vspace{0.6cm}
+\section*{PROFESSIONAL SUMMARY}
+\hrule
+\vspace{0.3cm}
+\noindent
+Results-driven Senior Software Engineer at Microsoft with extensive experience designing and deploying large-scale, cloud-based services. Technical lead for projects ranging from cross-tenant collaboration features to comprehensive tenant backup and recovery services in Entra~ID. Skilled in driving initiatives from concept to implementation, coordinating large teams, and collaborating with partner organizations. Passionate about security, performance, and delivering reliable services to billions of enterprise and consumer users.
 
-	% Import each section
-	\section*{EDUCATION}
+%-------------------------------
+% EXPERIENCE
+%-------------------------------
+\vspace{0.6cm}
+\section*{EXPERIENCE}
+\hrule
+\vspace{0.3cm}
 
-	\hrule \relax
-	\sectionheaderspace
+\noindent
+\textbf{Microsoft,} Redmond, WA\\
+\emph{Senior Software Engineer}\\
+\noindent\textbf{Entra ID Tenant Backup \& Recovery} \hfill\textit{June 2024 -- Present}
+\begin{itemize}[noitemsep,nolistsep,label={-}]
+	\item Led a team of 7 engineers and 3 product managers to design and prototype a tenant backup/recovery system for restoring large-scale enterprise customer tenants consisting of tens of millions of objects to previous states.
+	\item Authored end-to-end design, cost analysis, privacy data flow, and threat model; collaborated with cross-org leadership to finalize approach.
+	\item Implemented two orchestrator Kubernetes microservices enabling administrators to start, monitor, and manage asynchronous recovery jobs with robust logging and fault detection.
+	\item Mentored junior engineers on code quality, architectural best practices, and on-call readiness. Fostered a collaborative team culture via “Ask Me Anything” and “Recovery Games” sessions.
+	\item Coordinated weekly customer feedback sessions and integrated real-world requirements into product design.
+\end{itemize}
 
-	\noindent \textbf{University of Florida,} Gainesville, FL
-	\hfill\textbf{GPA: 3.96/4.0}
-	\hfill\textbf{August 2016 to May 2020}\\
-	\textit{Bachelor of Science in Computer Engineering}
-	\begin{itemize}[noitemsep,nolistsep, label = {-}]
-		\item  Coursework - 
-			Algorithm Design,
-			Object Oriented Programming,
-			Computer System Design,
-			Operating Systems,
-			Microprocessor Applications II (RTOS),
-			Programming Language Concepts,
-			Database Systems
-		\item  Honors - 
-			\href{https://www.ece.ufl.edu/people/student-awards/}
-					{Computer E Award} (most prestigious academic award granted by ECE department),
-			\href{https://clas.ufl.edu/undergraduate/anderson-scholars/}
-					{Anderson Scholar} (top 1\% academically, class of 2020),
-			\href{https://www.eng.ufl.edu/leadership/students/scholarships/thomas-o-hunter-leadership/}
-					{College of Engineering Scholarship for Engineering Leadership},
-			CISE Scholarship,
-			ECE Scholarship (x2),
-			College of Engineering Dean\rq s List (x4)
-			% \href{https://www.sfa.ufl.edu/types-of-aid/bright-futures/}
-			% 		{Bright Futures Florida Academic Scholar (100\% tuition coverage)}
-	\end{itemize}
-	\subsectionspace
+\noindent\textbf{Entra ID Cross-Tenant Access Settings} \hfill\textit{August 2020 -- June 2024}
+\begin{itemize}[noitemsep,nolistsep,label={-}]
+	\item Owner of the \href{https://learn.microsoft.com/en-us/entra/external-id/cross-tenant-access-overview}{cross-tenant access settings MSGraph APIs}, a set of OData REST APIs receiving over 66 million requests per day used to securely model B2B collaboration scenarios.
+	\item Designed and rolled out the scalable Cross-Tenant Access Policy (XTAP) solution, migrating over 7 million customer tenants at scale with zero customer disruptions.
+	\item Drove cross-org execution with partner teams (Substrate, eSTS, MSA) to unblock new features, mitigate security concerns, and enable advanced B2B scenarios.
+\end{itemize}
 
-	\section*{EXPERIENCE}
+%-------------------------------
+% EDUCATION
+%-------------------------------
+\vspace{0.6cm}
+\section*{EDUCATION}
+\hrule
+\vspace{0.3cm}
+\noindent
+\textbf{University of Florida,} Gainesville, FL \hfill{GPA: 3.96/4.00}\\
+\textit{Bachelor of Science in Computer Engineering}\\
+    \href{https://www.ece.ufl.edu/people/student-awards/}
+            {Computer E Award} (most prestigious academic award granted by ECE department),
+    \href{https://clas.ufl.edu/undergraduate/anderson-scholars/}
+            {Anderson Scholar} (top 1\% academically in graduating class),
+    \href{https://www.eng.ufl.edu/leadership/students/scholarships/thomas-o-hunter-leadership/}
+            {College of Engineering Scholarship for Engineering Leadership},
+    CISE Scholarship,
+    ECE Scholarship (x2),
+    College of Engineering Dean\rq s List (x4),
+    \href{https://en.wikipedia.org/wiki/Bright_Futures_Scholarship_Program}{Bright Futures Florida Academic Scholar (100\% tuition coverage)}
 
-	\hrule \relax
-	\sectionheaderspace
-	
-	\noindent \textbf{Microsoft,} Redmond, WA \hfill\textbf{May 2019 to August 2019}\\
-	\textit{Software Engineer Intern}
-	\begin{itemize}[noitemsep,nolistsep, label = {-}]
-		\item Developed using C\# and .NET on \href{https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis}{Azure Active Directory}, a cloud-based service responsible for managing user identities, access management, and devices.
-		\item Solved a major customer complaint regarding the loss of private BitLocker key data by refactoring API calls and architecting an additional external storage model to decouple the lifetime of two data objects.
-		\item Changed the intrinsic way that the Microsoft Mezzo cache service operated by altering their data syncing service to sync data objects with a one-to-many instead of a one-to-one relationship.
-	\end{itemize}
-	\subsectionspace
-	
-	\noindent \textbf{Ultimate Software,} Weston, FL \hfill\textbf{May 2018 to August 2018}\\
-	\textit{Software Engineer Intern}
-	\begin{itemize}[noitemsep,nolistsep, label = {-}]
-		\item Developed and tested using C\# and ASP.NET on \href{https://www.ultimatesoftware.com/UltiPro-Solution-Features-Payment-Services}{UTE (UltiPro Tax Engine)}, an internal tax filing service responsible for the collection of over 13,000 tax codes.
-		\item Implemented Grafana dashboard to diagnose performance issues with generation and calculation of tax forms in order to better serve users.
-	\end{itemize}
+%-------------------------------
+% TECHNICAL SKILLS
+%-------------------------------
+\vspace{0.6cm}
+\section*{TECHNICAL SKILLS}
+\hrule
+\vspace{0.3cm}
 
-	\subsectionspace
+\begin{itemize}[noitemsep,nolistsep,label={}]
+    \item \textbf{Cloud \& Distributed Systems}
+          Azure (CosmosDB, Storage, Service Bus, Key Vault, Service Fabric), 
+          Redis, Kubernetes, REST APIs, Microservices, Multi-tenant architecture
 
-	\section*{VOLUNTEER EXPERIENCE}
+    \item \textbf{Programming \& Frameworks}
+          C\#, Python, Java, C, C++, Bash, OCaml, .NET, 
+          Docker, OData, Azure DevOps (CI/CD), Git
 
-	\hrule \relax
-	\sectionheaderspace
+    \item \textbf{Security \& Reliability}
+          Threat modeling, privacy data flows, GDPR/Schrems II compliance, monitoring,
+          live site on-call
 
-	\noindent\textbf{Google igniteCS,} Gainesville, FL \hfill\textbf{January 2017 to May 2018}\\
-	\textit{Program Lead (formerly Logistics Director)}
-	\begin{itemize}[noitemsep,nolistsep, label = {-}]
-		\item Led an educational initiative with the goal of educating students in basic programming principles.
-		\item Communicated directly with Google to design \href{https://sites.google.com/view/ignitecs/home}{the initiative's} Computer Science curiculuum.
-		\item Managed scheduling between Oak View Middle School and our Google igniteCS team of over 30 mentors.
-	\end{itemize} 
-	\subsectionspace
+    \item \textbf{Architecture \& Leadership}
+          End-to-end design, cost analysis, architecture reviews,
+          mentoring junior engineers, cross-org collaboration
 
-	\section*{PROJECTS}
-
-	\hrule \relax
-	\sectionheaderspace
-
-	\noindent\textbf{Firespotter,} Gainesville, FL  \hfill\textbf{August 2019 to May 2020}
-	\begin{itemize}[noitemsep,nolistsep, label={-}]
-		\item Built \href{https://github.com/UF-CEN4914/firespotter}{a web application} in Django that utilizes deep learning to detect wildfires in an array of images provided by low-cost internet protocol cameras to aid in the fight against wildfires.
-		\item Designed a neural network architecture in PyTorch that achieved a 95.3\% accuracy rating.
-	\end{itemize}
-	\subsectionspace
-
-	\noindent\textbf{C-Like Language to LLVM Compiler,} Gainesville, FL  \hfill\textbf{April 2019 to May 2019}
-	\begin{itemize}[noitemsep,nolistsep, label={-}]
-		\item Built \href{https://github.com/hodsonus/programming-language-concepts}{a compiler} in OCaml for GNU bc, the popular Unix calculator language, using the LR(1) parser generator Menhir and OCaml's LLVM library to generate LLVM IR code.
-		\item Includes functions, if/else statements, and while/for loops - all structured in an abstract syntax tree.
-	\end{itemize}
-	\subsectionspace
-
-	\section*{TECHNICAL SKILLS}
-
-	\hrule \relax
-	\sectionheaderspace
-
-	\begin{itemize}[noitemsep,nolistsep, label={}]
-		\item \textbf{Architecture \& Systems} \tabto*{5cm} Web Development,  RESTful APIs,  Microservices, Embedded Systems
-		\item \textbf{Languages} \tabto*{5cm} C\#, Python, Java, C, Assembly (AVR, ARM), OCaml, C++
-		\item \textbf{Frameworks \& Tools} \tabto*{5cm} .NET, Django, Hugo, PyTorch, Bash, Git
-		\item \textbf{Data Management} \tabto*{5cm} Microsoft SQL Server, MongoDB
-		\item \textbf{Containers \& Cloud} \tabto*{5cm}  Docker, Azure
-	\end{itemize}
-	\subsectionspace
-
-	% Right footer with the date of generation
-	\rfoot{\today}
+\end{itemize}
 
 \end{document}
